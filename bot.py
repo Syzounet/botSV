@@ -30,7 +30,7 @@ async def W(ctx):
 @bot.command()
 async def Y(ctx):
     await ctx.send("Défi spécial : Connecte le circuit correctement pour allumer la LED 💡")
-    await ctx.send("Joue ici : http://5.196.26.73/site/mini-jeu/index.html")
+    await ctx.send("Joue ici : http://5.196.26.73/site/mini-jeu/jeu.html")
 
 @bot.command()
 async def M(ctx):

@@ -14,18 +14,18 @@ intents.message_content = True
 intents.members = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-@bot.event
-async def on_member_join(member):
-    if member.name == "Morgane":  # Remplace par son pseudo exact
-        channel = discord.utils.get(member.guild.text_channels, name="général")  # Remplace par le bon salon
-        if channel:
-            await channel.send(
-                f"💖 **Bienvenue sur le serveur, mon amour !** 💖\n\n"
-                f"✨ **Ta présence illumine cet endroit comme toujours.** ✨\n\n"
-                f"🌹 *Patience, mon baybay...* Ce soir, une surprise t'attend.\n"
-                f"🕵️‍♀️ **Le premier indice te sera révélé par ton copain le plus beau...** 😏💘\n\n"
-                f"💌 **En attendant, installe-toi confortablement et prépare-toi pour l'aventure !** 🎁✨"
-            )
+@bot.command()
+async def deb(ctx):
+    message = (
+        "Bienvenue dans la chasse au trésor ! 🎉\n\n"
+        "Chaque 'jeu' te donnera une lettre avec lesquelles tu devras envoyer `!lettre` pour continuer à jouer ! 🕵️‍♀️\n\n"
+        "💖 **Bienvenue sur le serveur, mon amour !** 💖\n\n"
+        "✨ **Ta présence illumine cet endroit comme toujours.** ✨\n\n"
+        "🌹 *Patience, ma chérie...* Ce soir, une surprise t'attend.\n"
+        "🕵️‍♀️ **Le premier indice te sera révélé par ton copain le plus beau...** 😏💘\n\n"
+        "💌 **En attendant, installe-toi confortablement et prépare-toi pour l'aventure !** 🎁✨"
+    )
+    await ctx.send(message)
 
 # 📜 Envoi du premier indice
 @bot.command()

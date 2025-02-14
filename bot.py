@@ -50,11 +50,11 @@ async def B(ctx):
 @bot.command()
 async def macdo(ctx):
     await ctx.send("Bravo trop forte la meilleur même")
-    await ctx.send("Tu as trouvé la lettre M")
+    await ctx.send("Tu as trouvé la lettre V")
 
 # 🎁 Fin de la chasse au trésor
 @bot.command()
-async def M(ctx):
+async def V(ctx):
     await ctx.send("Mon baybay ta réussi bravo 🎉")
     await ctx.send("Tu dois savoir, que quoi qu'il arrive, je serais toujours la pour toi parce qu'on forme une putain d'équipe. Nous deux contre le monde, parce que toi, c'est moi et moi c'est toi. Parce que toi et moi c'est vrai c'est absolument authentique tellement que ça brûle dans mon coeur, mon amour. j'aime cette histoire qu'on est entrain d'écrire et je te fais la promesse que je ne laisserais pas ce monde briser ta douceur ")
     await ctx.send("*Joyeuse Saint-Valentin mon baybay ❤️ je t'aime")

@@ -11,7 +11,21 @@ TOKEN = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.default()
 intents.message_content = True
+intents.members = True
 bot = commands.Bot(command_prefix="!", intents=intents)
+
+@bot.event
+async def on_member_join(member):
+    if member.name == "Morgane":  # Remplace par son pseudo exact
+        channel = discord.utils.get(member.guild.text_channels, name="général")  # Remplace par le bon salon
+        if channel:
+            await channel.send(
+                f"💖 **Bienvenue sur le serveur, mon amour !** 💖\n\n"
+                f"✨ **Ta présence illumine cet endroit comme toujours.** ✨\n\n"
+                f"🌹 *Patience, mon baybay...* Ce soir, une surprise t'attend.\n"
+                f"🕵️‍♀️ **Le premier indice te sera révélé par ton copain le plus beau...** 😏💘\n\n"
+                f"💌 **En attendant, installe-toi confortablement et prépare-toi pour l'aventure !** 🎁✨"
+            )
 
 # 📜 Envoi du premier indice
 @bot.command()
@@ -57,7 +71,7 @@ async def macdo(ctx):
 async def V(ctx):
     await ctx.send("Mon baybay ta réussi bravo 🎉")
     await ctx.send("Tu dois savoir, que quoi qu'il arrive, je serais toujours la pour toi parce qu'on forme une putain d'équipe. Nous deux contre le monde, parce que toi, c'est moi et moi c'est toi. Parce que toi et moi c'est vrai c'est absolument authentique tellement que ça brûle dans mon coeur, mon amour. j'aime cette histoire qu'on est entrain d'écrire et je te fais la promesse que je ne laisserais pas ce monde briser ta douceur ")
-    await ctx.send("*Joyeuse Saint-Valentin mon baybay ❤️ je t'aime")
+    await ctx.send("*Joyeuse Saint-Valentin mon baybay* ❤️ je t'aime")
     await asyncio.sleep(5)
     await ctx.send("oh et attend je sais pas si tu as remarqué mais les lettre forme une phrase spéciale :")
     await ctx.send("W Y B M V ? : essaie de le traduire (indice : c'est en anglais)")
